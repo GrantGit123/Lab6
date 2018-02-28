@@ -103,8 +103,28 @@ public class Colosseum {
      *         <p>
      */
     public static Pokemon buildPokemon() {
-        Pokemon returnPokemon = null;
-        return returnPokemon;
+        Pokemon pokemon;
+        System.out.println("Select from the following types: ");
+        System.out.println("1 - Electric Pokemon");
+        System.out.println("2 - Fire Pokemon");
+        System.out.println("3 - Water Pokemon");
+
+        if (myScan.equals("1")) {
+            pokemon = new ElectricPokemon();
+        }
+        if (myScan.equals("2")) {
+            pokemon = new FirePokemon();
+        }
+        if (myScan.equals("3")) {
+            pokemon = new WaterPokemon();
+        } else {
+            System.out.println("Sorry, you must pick either 1, 2, or 3");
+            pokemon = null;
+        }
+        System.out.println("Please name your Pokemon:");
+
+        ;
+        return pokemon;
     }
 
     /**
